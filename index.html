@@ -1001,49 +1001,262 @@
             </div>
         </div>
     </section>
+<section class="section" id="contact">
 
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact">
-                <div class="contactgrid">
-                    <div>
-                        <div class="kicker" style="color:var(--lime)">Get in touch</div>
-                        <h2>Need a quotation?</h2>
-                        <p>Send the product name and quantity. The enquiry form opens your email client with the request
-                            ready to send.</p>
-                        <div class="details">
-                            <div class="detail"><small>Address</small>72/D, Ground Floor, 1st Cross, 7th 'A' Main,
-                                Vijayanagar, Bengaluru, Karnataka – 560 104</div>
-                            <div class="detail"><small>Email</small><a
-                                    href="mailto:accounts@medfinityindia.com">accounts@medfinityindia.com</a><br><a
-                                    href="mailto:Lohithayn1997@gmail.com">medfinitysurgical@gmail.com</a></div>
-                            <div class="detail"><small>Phone / WhatsApp</small><a href="tel:+919741567940">+91 97415
-                                    67940</a></div>
-                        </div>
-                        <br><br>
-                        <div class="office-map">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d614.8513310941518!2d77.53483672364864!3d12.960945318296215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e74462b654d%3A0x3566acdcbc37cfbb!2s72%2FD%2C%201st%20C%20Cross%20Rd%2C%20Vijaya%20Nagar%20II%20Stage%2C%20Hampi%20Nagar%2C%20RPC%20Layout%2C%20Vijayanagar%2C%20Bengaluru%2C%20Karnataka%20560104!5e1!3m2!1sen!2sin!4v1790320493870!5m2!1sen!2sin"
-                                width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="strict-origin-when-cross-origin">
-                            </iframe>
-                        </div>
+    <!-- Responsive styles kept inside the div -->
+    <div class="container"
+        style="width:100%;max-width:1200px;margin:auto;padding:0 16px;box-sizing:border-box;">
+
+        <div class="contact">
+
+            <div class="contactgrid"
+                style="display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,500px);gap:40px;align-items:start;">
+
+                <!-- LEFT SIDE -->
+                <div style="min-width:0;">
+
+                    <div class="kicker" style="color:var(--lime);">
+                        Get in touch
                     </div>
-                    <form class="form" id="quoteForm">
-                        <h3>Product Enquiry</h3>
-                        <div class="formgrid"><input id="name" required placeholder="Your name"><input id="phone"
-                                required placeholder="Phone number"><input id="email" type="email" required
-                                placeholder="Email address"><select id="productSelect" class="full">
-                                <option value="">Select a product</option>
-                            </select><input id="qty" type="number" min="1" value="1" placeholder="Quantity"><textarea
-                                id="message" placeholder="Additional requirements"></textarea></div><button
-                            class="btn primary" type="submit">Send Enquiry by Email →</button><a class="btn whatsapp"
-                            style="width:100%;margin-top:8px" id="waForm" target="_blank">Send via WhatsApp</a>
-                    </form>
+
+                    <h2 style="margin:10px 0;">
+                        Need a quotation?
+                    </h2>
+
+                    <p style="line-height:1.6;">
+                        Send the product name and quantity. The enquiry form opens your email
+                        client with the request ready to send.
+                    </p>
+
+                    <div class="details"
+                        style="display:flex;flex-direction:column;gap:18px;">
+
+                        <div class="detail"
+                            style="overflow-wrap:anywhere;line-height:1.6;">
+                            <small>Address</small><br>
+                            72/D, Ground Floor, 1st Cross, 7th 'A' Main,
+                            Vijayanagar, Bengaluru, Karnataka – 560 104
+                        </div>
+
+                        <div class="detail"
+                            style="overflow-wrap:anywhere;line-height:1.6;">
+                            <small>Email</small><br>
+
+                            <a href="mailto:accounts@medfinityindia.com">
+                                accounts@medfinityindia.com
+                            </a>
+                            <br>
+
+                            <a href="mailto:Lohithayn1997@gmail.com">
+                                medfinitysurgical@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="detail"
+                            style="overflow-wrap:anywhere;line-height:1.6;">
+                            <small>Phone / WhatsApp</small><br>
+
+                            <a href="tel:+919741567940">
+                                +91 97415 67940
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- MAP -->
+                    <div class="office-map"
+                        style="width:100%;margin-top:25px;overflow:hidden;border-radius:12px;">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d614.8513310941518!2d77.53483672364864!3d12.960945318296215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e74462b654d%3A0x3566acdcbc37cfbb!2s72%2FD%2C%201st%20C%20Cross%20Rd%2C%20Vijaya%20Nagar%20II%20Stage%2C%20Hampi%20Nagar%2C%20RPC%20Layout%2C%20Vijayanagar%2C%20Bengaluru%2C%20Karnataka%20560104!5e1!3m2!1sen!2sin!4v1790320493870!5m2!1sen!2sin"
+                            style="width:100%;height:250px;border:0;display:block;"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+
+                    </div>
+
                 </div>
+
+
+                <!-- RIGHT SIDE / FORM -->
+                <form class="form"
+                    id="quoteForm"
+                    style="width:100%;box-sizing:border-box;min-width:0;">
+
+                    <h3>
+                        Product Enquiry
+                    </h3>
+
+                    <div class="formgrid"
+                        style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+
+                        <input
+                            id="name"
+                            required
+                            placeholder="Your name"
+                            style="width:100%;box-sizing:border-box;">
+
+                        <input
+                            id="phone"
+                            required
+                            placeholder="Phone number"
+                            style="width:100%;box-sizing:border-box;">
+
+                        <input
+                            id="email"
+                            type="email"
+                            required
+                            placeholder="Email address"
+                            style="width:100%;box-sizing:border-box;">
+
+                        <select
+                            id="productSelect"
+                            class="full"
+                            style="width:100%;box-sizing:border-box;grid-column:1/-1;">
+
+                            <option value="">
+                                Select a product
+                            </option>
+
+                        </select>
+
+                        <input
+                            id="qty"
+                            type="number"
+                            min="1"
+                            value="1"
+                            placeholder="Quantity"
+                            style="width:100%;box-sizing:border-box;">
+
+                        <textarea
+                            id="message"
+                            placeholder="Additional requirements"
+                            style="width:100%;box-sizing:border-box;min-height:120px;resize:vertical;grid-column:1/-1;">
+                        </textarea>
+
+                    </div>
+
+                    <button
+                        class="btn primary"
+                        type="submit"
+                        style="width:100%;box-sizing:border-box;margin-top:15px;">
+                        Send Enquiry by Email →
+                    </button>
+
+                    <a
+                        class="btn whatsapp"
+                        id="waForm"
+                        target="_blank"
+                        style="width:100%;margin-top:8px;box-sizing:border-box;display:block;text-align:center;">
+                        Send via WhatsApp
+                    </a>
+
+                </form>
+
             </div>
+
         </div>
-    </section>
+    </div>
+
+
+    <!-- RESPONSIVE SETTINGS -->
+    <style>
+
+        /* Tablet */
+        @media (max-width: 900px) {
+
+            .contactgrid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+
+            .office-map iframe {
+                height: 300px !important;
+            }
+
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            #contact .container {
+                padding-left: 14px !important;
+                padding-right: 14px !important;
+            }
+
+            #contact .contactgrid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 25px !important;
+            }
+
+            #contact .formgrid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+
+            #contact .formgrid .full,
+            #contact .formgrid textarea {
+                grid-column: 1 !important;
+            }
+
+            #contact input,
+            #contact select,
+            #contact textarea {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                font-size: 16px;
+            }
+
+            #contact .office-map {
+                width: 100% !important;
+            }
+
+            #contact .office-map iframe {
+                width: 100% !important;
+                height: 250px !important;
+            }
+
+            #contact .btn {
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            #contact h2 {
+                font-size: 28px;
+                line-height: 1.2;
+            }
+
+        }
+
+
+        /* Small phones */
+        @media (max-width: 380px) {
+
+            #contact .container {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            #contact h2 {
+                font-size: 24px;
+            }
+
+            #contact .office-map iframe {
+                height: 220px !important;
+            }
+
+        }
+
+    </style>
+
+</section>
+
 
     <footer class="footer">
         <div class="container"><span>© <span id="year"></span> Medfinity Surgical Equipment</span><span>Connecting trust
