@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Medfinity Surgical Equipment — premium digital catalogue for hospital and healthcare equipment.">
+    <title>Medfinity | Surgical & Hospital Equipment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --navy: #08294f;
+            --navy2: #061b35;
+            --blue: #1176c5;
+            --cyan: #1eb8d5;
+            --lime: #b9d936;
+            --ink: #11243b;
+            --muted: #64758a;
+            --bg: #f4f8fb;
+            --white: #fff;
+            --line: #dfe8f1;
+            --shadow: 0 22px 70px rgba(8, 41, 79, .12);
+            --r: 24px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            color: var(--ink);
+            background: #fff
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        .container {
+            width: min(1220px, 92%);
+            margin: auto
+        }
+
+        .top {
+            background: var(--navy2);
+            color: #d9e9f7;
+            font-size: 12px
+        }
+
+        .top .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 9px 0
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: rgba(255, 255, 255, .93);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .brand {
+            display: flex;
+            gap: 11px;
+            align-items: center
+        }
+
+        .mark {
+            width: 47px;
+            height: 47px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, var(--navy), var(--blue));
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font: 800 16px Manrope;
+            position: relative;
+            box-shadow: 0 8px 24px rgba(17, 118, 197, .25)
+        }
+
+        .mark:after {
+            content: "+";
+            position: absolute;
+            right: 5px;
+            top: 2px;
+            color: var(--lime);
+            font-size: 17px
+        }
+
+        .brand b {
+            font: 800 21px Manrope;
+            color: var(--navy);
+            letter-spacing: -.4px
+        }
+
+        .brand small {
+            display: block;
+            color: var(--muted);
+            font-size: 9px;
+            letter-spacing: 2px
+        }
+
+        .links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: #344a62
+        }
+
+        .links a:hover {
+            color: var(--blue)
+        }
+
+        .navbtn {
+            background: var(--lime);
+            padding: 12px 18px;
+            border-radius: 12px;
+            color: var(--navy)
+        }
+
+        .hamb {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 27px;
+            color: var(--navy)
+        }
+
+        .hero {
+            background: radial-gradient(circle at 85% 20%, rgba(30, 184, 213, .18), transparent 30%), linear-gradient(125deg, #f2f8fc, #fff 55%, #eef6fa);
+            padding: 72px 0 65px;
+            overflow: hidden
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.03fr .97fr;
+            gap: 65px;
+            align-items: center
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            background: #eaf6fb;
+            color: var(--blue);
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        .eyebrow i {
+            width: 7px;
+            height: 7px;
+            background: var(--lime);
+            border-radius: 50%
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Manrope;
+            line-height: 1.1
+        }
+
+        h1 {
+            font-size: clamp(44px, 6vw, 78px);
+            letter-spacing: -4px;
+            color: var(--navy);
+            margin: 18px 0
+        }
+
+        h1 span {
+            color: var(--blue)
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 630px;
+            line-height: 1.7
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 20px;
+            border-radius: 13px;
+            font-weight: 800;
+            border: 1px solid var(--line);
+            cursor: pointer
+        }
+
+        .primary {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy)
+        }
+
+        .secondary {
+            background: #fff;
+            color: var(--navy)
+        }
+
+        .whatsapp {
+            background: #1aab5d;
+            color: #fff;
+            border-color: #1aab5d
+        }
+
+        .hero-visual {
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 12px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            transform: rotate(1deg)
+        }
+
+        .hero-visual img {
+            width: 100%;
+            border-radius: 20px;
+            aspect-ratio: 1.4;
+            object-fit: cover;
+            object-position: center
+        }
+
+        .hero-badge {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 8px 5px
+        }
+
+        .hero-badge strong {
+            color: var(--navy)
+        }
+
+        .hero-badge span {
+            color: var(--muted);
+            font-size: 12px
+        }
+
+        .trust {
+            padding: 23px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .trustgrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .trustitem {
+            text-align: center;
+            border-right: 1px solid var(--line)
+        }
+
+        .trustitem:last-child {
+            border: 0
+        }
+
+        .trustitem b {
+            font: 800 24px Manrope;
+            color: var(--navy);
+            display: block
+        }
+
+        .trustitem span {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .section {
+            padding: 88px 0
+        }
+
+        .alt {
+            background: var(--bg)
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 30px
+        }
+
+        .kicker {
+            color: var(--blue);
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 1.6px;
+            text-transform: uppercase
+        }
+
+        .head h2 {
+            margin: 7px 0 0;
+            font-size: clamp(31px, 4vw, 48px);
+            letter-spacing: -1.8px;
+            color: var(--navy)
+        }
+
+        .head p {
+            color: var(--muted);
+            max-width: 560px;
+            margin: 0
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px
+        }
+
+        .cat {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 22px;
+            transition: .25s
+        }
+
+        .cat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow)
+        }
+
+        .cat .icon {
+            font-size: 27px;
+            margin-bottom: 18px
+        }
+
+        .cat h3 {
+            font-size: 18px;
+            color: var(--navy);
+            margin: 0 0 8px
+        }
+
+        .cat p {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .tools {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 24px
+        }
+
+        .search {
+            flex: 1;
+            min-width: 250px;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            padding: 14px 16px;
+            outline: none
+        }
+
+        .search:focus {
+            border-color: #8fc7e8;
+            box-shadow: 0 0 0 4px rgba(17, 118, 197, .08)
+        }
+
+        .select {
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            padding: 13px;
+            background: #fff;
+            color: var(--ink)
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: .25s;
+            display: flex;
+            flex-direction: column
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow)
+        }
+
+        .pic {
+            background: #fbfcfd;
+            padding: 8px;
+            position: relative
+        }
+
+        .pic img {
+            width: 100%;
+            height: 215px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 14px;
+            cursor: zoom-in
+        }
+
+        .label {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            background: var(--navy);
+            color: #fff;
+            border-radius: 8px;
+            padding: 5px 8px;
+            font-size: 10px;
+            font-weight: 800
+        }
+
+        .body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex: 1
+        }
+
+        .body .catname {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        .body h3 {
+            font-size: 17px;
+            color: var(--navy);
+            margin: 7px 0
+        }
+
+        .body p {
+            color: var(--muted);
+            font-size: 12px;
+            margin: 0 0 12px
+        }
+
+        .price {
+            font: 800 16px Manrope;
+            color: var(--navy);
+            margin-top: auto
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 13px
+        }
+
+        .mini {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer
+        }
+
+        .mini.quote {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy)
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 55px;
+            align-items: center
+        }
+
+        .aboutbox {
+            background: linear-gradient(145deg, var(--navy), #0d4a82);
+            border-radius: 30px;
+            padding: 34px;
+            color: #fff;
+            box-shadow: var(--shadow)
+        }
+
+        .aboutbox h3 {
+            font-size: 31px;
+            margin: 7px 0 12px
+        }
+
+        .aboutbox p {
+            color: #d5e4f2
+        }
+
+        .checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 22px
+        }
+
+        .check {
+            border: 1px solid rgba(255, 255, 255, .15);
+            background: rgba(255, 255, 255, .06);
+            border-radius: 13px;
+            padding: 12px;
+            font-size: 12px
+        }
+
+        .check b {
+            color: var(--lime);
+            display: block;
+            margin-bottom: 3px
+        }
+
+        .aboutcopy h2 {
+            font-size: 45px;
+            color: var(--navy);
+            margin: 7px 0 17px
+        }
+
+        .aboutcopy p {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8
+        }
+
+        .contact {
+            background: linear-gradient(130deg, var(--navy2), #0c467c);
+            color: #fff;
+            border-radius: 32px;
+            padding: 44px
+        }
+
+        .contactgrid {
+            display: grid;
+            grid-template-columns: 1fr .95fr;
+            gap: 45px
+        }
+
+        .contact h2 {
+            font-size: 46px;
+            margin: 7px 0 14px
+        }
+
+        .contact p {
+            color: #d1e0ef
+        }
+
+        .details {
+            display: grid;
+            gap: 12px
+        }
+
+        .detail {
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 14px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, .05)
+        }
+
+        .detail small {
+            display: block;
+            color: #9fc1dd;
+            margin-bottom: 4px
+        }
+
+        .detail a {
+            color: #fff;
+            font-weight: 700
+        }
+
+        .form {
+            background: #fff;
+            color: var(--ink);
+            padding: 20px;
+            border-radius: 20px
+        }
+
+        .form h3 {
+            margin: 0 0 13px;
+            color: var(--navy)
+        }
+
+        .formgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px
+        }
+
+        .form input,
+        .form textarea,
+        .form select {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px;
+            outline: none
+        }
+
+        .form textarea {
+            min-height: 90px;
+            grid-column: 1/-1;
+            resize: vertical
+        }
+
+        .form .full {
+            grid-column: 1/-1
+        }
+
+        .form button {
+            width: 100%;
+            margin-top: 10px
+        }
+
+        .footer {
+            background: #05172b;
+            color: #b7c8d8;
+            padding: 27px 0;
+            font-size: 12px
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 15, 30, .86);
+            z-index: 100;
+            padding: 22px;
+            align-items: center;
+            justify-content: center
+        }
+
+        .modal.open {
+            display: flex
+        }
+
+        .modalbox {
+            background: #fff;
+            border-radius: 20px;
+            max-width: 1050px;
+            width: 100%;
+            padding: 10px;
+            position: relative
+        }
+
+        .modalbox img {
+            width: 100%;
+            max-height: 86vh;
+            object-fit: contain;
+            border-radius: 14px
+        }
+
+        .close {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            border-radius: 50%;
+            background: var(--navy);
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 2
+        }
+
+        @media(max-width:1000px) {
+
+            .hero-grid,
+            .about,
+            .contactgrid {
+                grid-template-columns: 1fr
+            }
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .products {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .links {
+                display: none
+            }
+
+            .hamb {
+                display: block
+            }
+
+            .links.open {
+                display: flex;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 78px;
+                background: #fff;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 4%;
+                border-bottom: 1px solid var(--line)
+            }
+        }
+
+        @media(max-width:700px) {
+            .top .container {
+                flex-direction: column;
+                gap: 2px
+            }
+
+            .hero {
+                padding-top: 52px
+            }
+
+            .trustgrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px
+            }
+
+            .trustitem {
+                border: 0
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .section {
+                padding: 65px 0
+            }
+
+            .head {
+                display: block
+            }
+
+            .head p {
+                margin-top: 12px
+            }
+
+            .formgrid {
+                grid-template-columns: 1fr
+            }
+
+            .form textarea,
+            .form .full {
+                grid-column: auto
+            }
+
+            .contact {
+                padding: 27px 20px
+            }
+
+            .contact h2,
+            .aboutcopy h2 {
+                font-size: 35px
+            }
+        }
+
+        @media(max-width:480px) {
+
+            .products,
+            .categories {
+                grid-template-columns: 1fr
+            }
+
+            .pic img {
+                height: 235px
+            }
+
+            .hero-grid {
+                gap: 35px
+            }
+
+            .hero-visual {
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="container"><span>MEDFINITY • Surgical Equipment</span><span>Vijayanagar, Bengaluru • +91 97415
+                67940</span></div>
+    </div>
+    <nav>
+        <div class="container nav">
+            <a class="brand" href="#home">
+                <div class="mark">MF</div>
+                <div><b>MEDFINITY</b><small>SURGICAL EQUIPMENT</small></div>
+            </a>
+            <div class="links" id="links"><a href="#home">Home</a><a href="#solutions">Solutions</a><a
+                    href="#catalog">Products</a><a href="#about">About</a><a href="#contact" class="navbtn">Get a
+                    Quote</a></div>
+            <button class="hamb" id="hamb">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div>
+                <div class="eyebrow"><i></i> One-stop hospital equipment</div>
+                <h1>Healthcare equipment,<br><span>made easier.</span></h1>
+                <p>Discover Medfinity's surgical and hospital equipment catalogue — professionally presented for
+                    hospitals, clinics and healthcare facilities.</p>
+                <div class="actions"><a class="btn primary" href="#catalog">Explore Products →</a><a
+                        class="btn secondary" href="Medfinity-Brochure.pdf" target="_blank">View Full Brochure ↗</a><a
+                        class="btn whatsapp"
+                        href="https://wa.me/919741567940?text=Hello%20Medfinity,%20I%20would%20like%20a%20product%20quotation."
+                        target="_blank">WhatsApp Us</a></div>
+            </div>
+            <div class="hero-visual"><img src="assets/brochure-page-1.jpg"
+                    alt="Medfinity Surgical Equipment brochure cover">
+                <div class="hero-badge"><strong>Connecting trust and supply.</strong><span>Professional catalogue</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust">
+        <div class="container trustgrid">
+            <div class="trustitem"><b>100+</b><span>Products represented</span></div>
+            <div class="trustitem"><b>8+</b><span>Healthcare categories</span></div>
+            <div class="trustitem"><b>1-stop</b><span>Hospital sourcing</span></div>
+            <div class="trustitem"><b>Bengaluru</b><span>Karnataka, India</span></div>
+        </div>
+    </section>
+
+    <section class="section alt" id="solutions">
+        <div class="container">
+            <div class="head">
+                <div>
+                    <div class="kicker">Solutions</div>
+                    <h2>Designed around patient care.</h2>
+                </div>
+                <p>Browse product families represented in the supplied Medfinity brochure.</p>
+            </div>
+            <div class="categories">
+                <div class="cat">
+                    <div class="icon">🛏️</div>
+                    <h3>ICU & Ward Beds</h3>
+                    <p>Motorized, manual, Fowler and Semi Fowler beds.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">🏥</div>
+                    <h3>OT & Examination</h3>
+                    <p>Examination couches, obstetric and gynecology furniture.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">🛒</div>
+                    <h3>Trolleys & Stretchers</h3>
+                    <p>Emergency, trauma, anesthesia and hospital utility trolleys.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">♿</div>
+                    <h3>Mobility & Care</h3>
+                    <p>Wheelchairs, commode chairs and patient-care products.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">⚙️</div>
+                    <h3>Bed Accessories</h3>
+                    <p>Rails, bows, mattresses, castors and attachments.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">🩺</div>
+                    <h3>Diagnostics</h3>
+                    <p>Fetal Doppler, glucometer, nebulizer and suction products.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">🧤</div>
+                    <h3>Consumables</h3>
+                    <p>Gloves, dressings, diapers, wipes and related supplies.</p>
+                </div>
+                <div class="cat">
+                    <div class="icon">🚑</div>
+                    <h3>Hospital Support</h3>
+                    <p>Warmers, Ambu bags, cleaning and bio-hazard support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="catalog">
+        <div class="container">
+            <div class="head">
+                <div>
+                    <div class="kicker">Digital catalogue</div>
+                    <h2>Featured products</h2>
+                </div>
+                <p>Clear, large product images with brochure-based names. Prices are shown as “Price on request” because
+                    the supplied brochure does not list selling prices.</p>
+            </div>
+            <div class="tools"><input id="search" class="search"
+                    placeholder="Search products, e.g. ICU bed, trolley, wheelchair..."><select id="filter"
+                    class="select">
+                    <option>All categories</option>
+                    <option>ICU Beds</option>
+                    <option>Ward Beds</option>
+                    <option>Ward Furniture</option>
+                    <option>OT & Examination</option>
+                    <option>Trolleys</option>
+                    <option>Hospital Furniture</option>
+                    <option>Bed Accessories</option>
+                    <option>Mobility & Patient Care</option>
+                    <option>Diagnostics</option>
+                    <option>Consumables</option>
+                    <option>Instruments</option>
+                    <option>Hospital Support</option>
+                </select></div>
+            <div class="products" id="products"></div>
+        </div>
+    </section>
+
+    <section class="section alt" id="about">
+        <div class="container about">
+            <div class="aboutbox">
+                <div class="kicker" style="color:var(--lime)">Why Medfinity</div>
+                <h3>Connecting trust and supply.</h3>
+                <p>A premium digital catalogue built around the equipment families shown in the Medfinity brochure.</p>
+                <div class="checks">
+                    <div class="check"><b>Hospital focused</b>Equipment for clinical and support workflows.</div>
+                    <div class="check"><b>Wide catalogue</b>Beds, furniture, mobility and clinical supplies.</div>
+                    <div class="check"><b>Clear discovery</b>Large images and simple product enquiries.</div>
+                    <div class="check"><b>Direct enquiry</b>Quote requests by form, phone or WhatsApp.</div>
+                </div>
+            </div>
+            <div class="aboutcopy">
+                <div class="kicker">About</div>
+                <h2>A modern front door for your healthcare catalogue.</h2>
+                <p>Medfinity's supplied brochure presents surgical and hospital equipment across beds, ward and OT
+                    furniture, trolleys, accessories, mobility products, diagnostics, consumables and hospital support
+                    items.</p>
+                <p>The website keeps the brochure imagery while making product discovery easier on desktop and mobile.
+                </p><a class="btn primary" href="#contact">Send an Enquiry →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact">
+                <div class="contactgrid">
+                    <div>
+                        <div class="kicker" style="color:var(--lime)">Get in touch</div>
+                        <h2>Need a quotation?</h2>
+                        <p>Send the product name and quantity. The enquiry form opens your email client with the request
+                            ready to send.</p>
+                        <div class="details">
+                            <div class="detail"><small>Address</small>72/D, Ground Floor, 1st Cross, 7th 'A' Main,
+                                Vijayanagar, Bengaluru, Karnataka – 560 104</div>
+                            <div class="detail"><small>Email</small><a
+                                    href="mailto:accounts@medfinityindia.com">accounts@medfinityindia.com</a><br><a
+                                    href="mailto:Lohithayn1997@gmail.com">medfinitysurgical@gmail.com</a></div>
+                            <div class="detail"><small>Phone / WhatsApp</small><a href="tel:+919741567940">+91 97415
+                                    67940</a></div>
+                        </div>
+                        <br><br>
+                        <div class="office-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d614.8513310941518!2d77.53483672364864!3d12.960945318296215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e74462b654d%3A0x3566acdcbc37cfbb!2s72%2FD%2C%201st%20C%20Cross%20Rd%2C%20Vijaya%20Nagar%20II%20Stage%2C%20Hampi%20Nagar%2C%20RPC%20Layout%2C%20Vijayanagar%2C%20Bengaluru%2C%20Karnataka%20560104!5e1!3m2!1sen!2sin!4v1790320493870!5m2!1sen!2sin"
+                                width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin">
+                            </iframe>
+                        </div>
+                    </div>
+                    <form class="form" id="quoteForm">
+                        <h3>Product Enquiry</h3>
+                        <div class="formgrid"><input id="name" required placeholder="Your name"><input id="phone"
+                                required placeholder="Phone number"><input id="email" type="email" required
+                                placeholder="Email address"><select id="productSelect" class="full">
+                                <option value="">Select a product</option>
+                            </select><input id="qty" type="number" min="1" value="1" placeholder="Quantity"><textarea
+                                id="message" placeholder="Additional requirements"></textarea></div><button
+                            class="btn primary" type="submit">Send Enquiry by Email →</button><a class="btn whatsapp"
+                            style="width:100%;margin-top:8px" id="waForm" target="_blank">Send via WhatsApp</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container"><span>© <span id="year"></span> Medfinity Surgical Equipment</span><span>Connecting trust
+                and supply.</span></div>
+    </footer>
+    <div class="modal" id="modal">
+        <div class="modalbox"><button class="close" id="close">×</button><img id="modalImg" alt="Product preview"></div>
+    </div>
+
+    <script>
+        const products = [{ "id": "medfinity-001", "name": "Motorized ICU Bed \u2014 5 Function (Excel Plus)", "cat": "ICU Beds", "price": "Price on request", "desc": "5-function motorized ICU bed shown in the Medfinity brochure.", "page": 2 }, { "id": "medfinity-002", "name": "Motorized ICU Bed \u2014 5 Function (Excel)", "cat": "ICU Beds", "price": "Price on request", "desc": "5-function motorized ICU bed with electric adjustment.", "page": 2 }, { "id": "medfinity-003", "name": "Motorized ICU Bed \u2014 5 Function (Premium)", "cat": "ICU Beds", "price": "Price on request", "desc": "Premium 5-function motorized ICU bed.", "page": 2 }, { "id": "medfinity-004", "name": "Manual ICU Bed \u2014 5 Function (Deluxe)", "cat": "ICU Beds", "price": "Price on request", "desc": "Manual 5-function ICU bed with crank operation.", "page": 2 }, { "id": "medfinity-005", "name": "Motorized ICU Bed \u2014 3 Function (Premium)", "cat": "ICU Beds", "price": "Price on request", "desc": "Premium 3-function motorized ICU bed.", "page": 2 }, { "id": "medfinity-006", "name": "Manual ICU Bed \u2014 3 Function (Deluxe)", "cat": "ICU Beds", "price": "Price on request", "desc": "Deluxe 3-function manual ICU bed.", "page": 2 }, { "id": "medfinity-007", "name": "Motorized Fowler Bed \u2014 2 Function (Premium)", "cat": "Ward Beds", "price": "Price on request", "desc": "2-function motorized Fowler bed.", "page": 3 }, { "id": "medfinity-008", "name": "Manual Fowler Bed \u2014 2 Function (Deluxe)", "cat": "Ward Beds", "price": "Price on request", "desc": "2-function manual Fowler bed.", "page": 3 }, { "id": "medfinity-009", "name": "Manual Fowler Bed \u2014 2 Function (Wooden Panels)", "cat": "Ward Beds", "price": "Price on request", "desc": "Manual Fowler bed with wooden panels.", "page": 3 }, { "id": "medfinity-010", "name": "Motorized Semi Fowler Backrest Bed \u2014 1 Function (Premium)", "cat": "Ward Beds", "price": "Price on request", "desc": "Premium motorized semi-Fowler backrest bed.", "page": 3 }, { "id": "medfinity-011", "name": "Manual Semi Fowler Backrest Bed \u2014 1 Function (Deluxe)", "cat": "Ward Beds", "price": "Price on request", "desc": "Deluxe manual semi-Fowler backrest bed.", "page": 3 }, { "id": "medfinity-012", "name": "Manual Semi Fowler Backrest Bed \u2014 1 Function (Economy)", "cat": "Ward Beds", "price": "Price on request", "desc": "Economy manual semi-Fowler backrest bed.", "page": 3 }, { "id": "medfinity-013", "name": "Manual Semi Fowler Backrest Bed \u2014 1 Function (Wooden Panels)", "cat": "Ward Beds", "price": "Price on request", "desc": "Manual semi-Fowler backrest bed with wooden panels.", "page": 3 }, { "id": "medfinity-014", "name": "Electric Semi Fowler Mattress \u2014 1 Function", "cat": "Ward Beds", "price": "Price on request", "desc": "Electric semi-Fowler mattress shown in the brochure.", "page": 3 }, { "id": "medfinity-015", "name": "Plain Bed", "cat": "Ward Furniture", "price": "Price on request", "desc": "Plain hospital bed.", "page": 4 }, { "id": "medfinity-016", "name": "Classic Attendant Bed", "cat": "Ward Furniture", "price": "Price on request", "desc": "Classic attendant bed.", "page": 4 }, { "id": "medfinity-017", "name": "Pediatric Bed Classic", "cat": "Ward Furniture", "price": "Price on request", "desc": "Classic pediatric bed.", "page": 4 }, { "id": "medfinity-018", "name": "Attendant Bed Cum Chair", "cat": "Ward Furniture", "price": "Price on request", "desc": "Attendant bed and chair combination.", "page": 4 }, { "id": "medfinity-019", "name": "Examination Couch", "cat": "OT & Examination", "price": "Price on request", "desc": "Hospital examination couch.", "page": 4 }, { "id": "medfinity-020", "name": "Examination Couch with Backrest", "cat": "OT & Examination", "price": "Price on request", "desc": "Examination couch with backrest.", "page": 4 }, { "id": "medfinity-028", "name": "Trauma Care Recovery Trolley", "cat": "Trolleys", "price": "Price on request", "desc": "Trauma care recovery trolley by screw mechanism.", "page": 5 }, { "id": "medfinity-029", "name": "Hydraulic Trauma Care Recovery Trolley", "cat": "Trolleys", "price": "Price on request", "desc": "Hydraulic trauma care recovery trolley.", "page": 5 }, { "id": "medfinity-033", "name": "ABS Emergency Trolley", "cat": "Trolleys", "price": "Price on request", "desc": "ABS emergency trolley.", "page": 5 }, { "id": "medfinity-034", "name": "ABS Anesthesia Trolley", "cat": "Trolleys", "price": "Price on request", "desc": "ABS anesthesia trolley.", "page": 5 }, { "id": "medfinity-044", "name": "Saline Stand \u2014 S.S.", "cat": "Hospital Furniture", "price": "Price on request", "desc": "Stainless-steel saline stand.", "page": 6 }, { "id": "medfinity-045", "name": "Dressing Trolley", "cat": "Hospital Furniture", "price": "Price on request", "desc": "Dressing trolley shown in multiple sizes.", "page": 6 }, { "id": "medfinity-049", "name": "Mayo's Trolley \u2014 S.S.", "cat": "Hospital Furniture", "price": "Price on request", "desc": "Stainless-steel Mayo's trolley.", "page": 6 }, { "id": "medfinity-050", "name": "Laparoscopic Trolley", "cat": "Hospital Furniture", "price": "Price on request", "desc": "Laparoscopic trolley.", "page": 6 }, { "id": "medfinity-063", "name": "Tuck Away PP Side Rails \u2014 Set of 4", "cat": "Bed Accessories", "price": "Price on request", "desc": "Tuck-away polypropylene side rails.", "page": 7 }, { "id": "medfinity-064", "name": "Tuck Away PP Side Rails \u2014 Set of 4", "cat": "Bed Accessories", "price": "Price on request", "desc": "Tuck-away polypropylene side rails, alternate brochure model.", "page": 7 }, { "id": "medfinity-068", "name": "Single Fold Foam Mattress", "cat": "Bed Accessories", "price": "Price on request", "desc": "Single-fold foam mattress.", "page": 7 }, { "id": "medfinity-070", "name": "Crash Cart Accessories", "cat": "Bed Accessories", "price": "Price on request", "desc": "Crash cart accessories: 2 cabinets and utility bins.", "page": 7 }, { "id": "mobility-commode", "name": "Commode Chair", "cat": "Mobility & Patient Care", "price": "Price on request", "desc": "Commode chair from the mobility range.", "page": 8 }, { "id": "mobility-wheelchair", "name": "Seneca Wheelchair", "cat": "Mobility & Patient Care", "price": "Price on request", "desc": "Seneca wheelchair shown in the brochure.", "page": 8 }, { "id": "clinical-fetal-doppler", "name": "Fetal Doppler", "cat": "Diagnostics", "price": "Price on request", "desc": "Fetal Doppler device.", "page": 9 }, { "id": "clinical-glucometer", "name": "AccuSure Glucometer", "cat": "Diagnostics", "price": "Price on request", "desc": "AccuSure glucometer shown in the brochure.", "page": 9 }, { "id": "clinical-gloves", "name": "Hand Gloves", "cat": "Consumables", "price": "Price on request", "desc": "Hand gloves from the consumables section.", "page": 10 }, { "id": "clinical-instruments", "name": "Dressing Scissors & Artery Forceps", "cat": "Instruments", "price": "Price on request", "desc": "Surgical instruments shown in the brochure.", "page": 10 }, { "id": "support-warmer", "name": "Infant Radiant Warmer", "cat": "Hospital Support", "price": "Price on request", "desc": "Infant radiant warmer.", "page": 11 }, { "id": "support-ambu", "name": "Ambu Bag Silicone", "cat": "Hospital Support", "price": "Price on request", "desc": "Silicone Ambu bag.", "page": 11 }];
+        const grid = document.getElementById("products"), search = document.getElementById("search"), filter = document.getElementById("filter"), select = document.getElementById("productSelect");
+        products.forEach(p => { const o = document.createElement("option"); o.value = p.name; o.textContent = p.name; select.appendChild(o) });
+        function card(p) { return `<article class="card"><div class="pic"><span class="label">${p.cat}</span><img src="assets/${p.id}.jpg" alt="${p.name}" loading="lazy" data-img="assets/${p.id}.jpg" data-alt="${p.name}"></div><div class="body"><div class="catname">${p.cat}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${p.price}</div><div class="card-actions"><button class="mini quote" onclick="choose('${p.name.replace(/'/g, "\\'")}')">Enquire</button><button class="mini" onclick="view('assets/${p.id}.jpg','${p.name.replace(/'/g, "\\'")}')">View Image</button></div></div></article>` }
+        function render() { const q = search.value.toLowerCase(), f = filter.value; const arr = products.filter(p => (f === "All categories" || p.cat === f) && ((p.name + " " + p.cat + " " + p.desc).toLowerCase().includes(q))); grid.innerHTML = arr.map(card).join("") || '<p style="color:#64758a">No matching product found.</p>' }
+        function choose(name) { select.value = name; document.getElementById("contact").scrollIntoView({ behavior: "smooth" }); setTimeout(() => document.getElementById("name").focus(), 500) }
+        function view(src, alt) { document.getElementById("modalImg").src = src; document.getElementById("modalImg").alt = alt; document.getElementById("modal").classList.add("open") }
+        search.oninput = render; filter.onchange = render; render();
+        document.getElementById("close").onclick = () => document.getElementById("modal").classList.remove("open");
+        document.getElementById("modal").onclick = e => { if (e.target.id === "modal") e.target.classList.remove("open") };
+        document.getElementById("quoteForm").onsubmit = function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const product = document.getElementById("productSelect").value || "General Enquiry";
+            const qty = document.getElementById("qty").value || "1";
+            const message = document.getElementById("message").value.trim() || "No additional requirements";
+
+            const subject = "Medfinity Product Enquiry - " + product;
+
+            const body =
+                `Dear Medfinity Team,
+
+I would like to enquire about the following product.
+
+------------------------------
+CUSTOMER DETAILS
+------------------------------
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+------------------------------
+PRODUCT DETAILS
+------------------------------
+
+Product: ${product}
+Quantity: ${qty}
+
+------------------------------
+ADDITIONAL REQUIREMENTS
+------------------------------
+
+${message}
+
+Please share the quotation, availability and further details.
+
+Thank you,
+${name}`;
+
+            const gmailUrl =
+                "https://mail.google.com/mail/?view=cm" +
+                "&fs=1" +
+                "&to=Lohithayn1997@gmail.com" +
+                "&su=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+
+            window.open(gmailUrl, "_blank");
+        }; document.getElementById("waForm").onclick = () => { const p = document.getElementById("productSelect").value || "General enquiry", n = document.getElementById("name").value || "Customer", q = document.getElementById("qty").value || "1"; document.getElementById("waForm").href = `https://wa.me/919741567940?text=${encodeURIComponent("Hello Medfinity, I am " + n + ". I would like a quotation for " + p + " (Qty: " + q + ").")}` };
+        document.getElementById("hamb").onclick = () => document.getElementById("links").classList.toggle("open");
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
